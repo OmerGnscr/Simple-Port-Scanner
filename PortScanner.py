@@ -28,8 +28,7 @@ def scan_specific_ports():
 	ports = ports.split(',')
 
 	for i in ports:
-		x = socket.SOCK_STREAM
-		sock = socket.socket(socket.AF_INET, x)
+		sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		result = sock.connect_ex((ip, int(i)))
 		try:
 			service = socket.getservbyport(int(i))
