@@ -66,11 +66,11 @@ def scan_multiple_ports():
 			service = "None"
 
 		if (result == 0):
-			print(" Port: {}\t State: Open\t Service: {}".format(i, service))
+			print(" Port: {}\t State: Open\t Service: {}".format(ports, service))
 		elif (result == 110):
-			print(" Port: {}\t State: Filtered\t Service: {}".format(i, service))
+			print(" Port: {}\t State: Filtered\t Service: {}".format(ports, service))
 		else:
-			print(" Port: {}\t State: Closed\t Service: {}".format(i, service))
+			print(" Port: {}\t State: Closed\t Service: {}".format(ports, service))
 		
 		sock.close()
 
